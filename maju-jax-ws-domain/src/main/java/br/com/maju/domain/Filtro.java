@@ -1,10 +1,15 @@
 package br.com.maju.domain;
 
+import javax.persistence.Column;
+import javax.persistence.Id;
+
 public class Filtro {
 	
 	private String tipoFiltro;
 	private String valorFiltro;
 	private String agrupamento;
+	
+	
 	
 	
 	public String getTipoFiltro() {

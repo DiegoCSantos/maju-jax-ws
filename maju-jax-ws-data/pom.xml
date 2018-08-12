@@ -32,7 +32,21 @@
 	    <groupId>br.com.majujaxws</groupId>
 		<artifactId>maju-jax-ws-domain</artifactId>
 	</dependency>
-	
+	<dependency>
+	    <groupId>com.h2database</groupId>
+	    <artifactId>h2</artifactId>
+	</dependency>
+	<dependency>
+	    <groupId>org.hibernate</groupId>
+	    <artifactId>hibernate-core</artifactId>
+	    <exclusions>
+	    	<exclusion>
+	    	<artifactId>dom4j</artifactId>
+	    	<groupId>dom4j</groupId>
+	    	</exclusion>
+	    </exclusions>
+	</dependency>
+		
 	</dependencies>
 
 
