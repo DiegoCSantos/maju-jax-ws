@@ -44,6 +44,8 @@
 	
 	</dependencies>
 
-
+	<build>
+		<finalName>maju-jaxws</finalName>
+	</build>
 
 </project>

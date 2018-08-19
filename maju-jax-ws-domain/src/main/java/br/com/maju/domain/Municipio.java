@@ -2,6 +2,7 @@ package br.com.maju.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -11,6 +12,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Municipio {
 	
 	@Id
+	@GeneratedValue
 	private int id;
 	
 	@Column

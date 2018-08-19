@@ -20,8 +20,8 @@ public class AbstractDAO <T>{
 		EntityManager entityManager= getEntityManager();
 		 entityManager.getTransaction().begin();
 		 entityManager.persist(entity);
-		 entityManager.getTransaction().commit();
 		 entityManager.flush();
+		 entityManager.getTransaction().commit();
 		 return entity;
 
 	}
@@ -32,8 +32,8 @@ public class AbstractDAO <T>{
 		EntityManager entityManager= getEntityManager();
 		 entityManager.getTransaction().begin();
 		 entityManager.merge(entity);
-		 entityManager.getTransaction().commit();
 		 entityManager.flush();
+		 entityManager.getTransaction().commit();
 		 return entity;
 
 	}
@@ -42,9 +42,9 @@ public class AbstractDAO <T>{
 		
 		EntityManager entityManager= getEntityManager();
 		 entityManager.getTransaction().begin();
-		 entityManager.remove(entity);
-		 entityManager.getTransaction().commit();
+		 entityManager.remove(entityManager.merge(entity));
 		 entityManager.flush();
+		 entityManager.getTransaction().commit();
 	}
 	
 

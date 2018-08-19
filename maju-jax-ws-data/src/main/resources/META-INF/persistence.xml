@@ -4,6 +4,7 @@
   version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
   
   <persistence-unit name="persistence-unit" transaction-type="RESOURCE_LOCAL">
+  <provider>org.hibernate.ejb.HibernatePersistence</provider>
     <class>br.com.maju.domain.Estado</class>
     <class>br.com.maju.domain.Municipio</class>
     <class>br.com.maju.domain.Previsao</class>
@@ -12,14 +13,13 @@
     
     <properties>
       <property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
-      <property name="javax.persistence.jdbc.url"    value="jdbc:h2:mem:test" />
+      <property name="javax.persistence.jdbc.url"    value="jdbc:h2:./database/db1;DB_CLOSE_ON_EXIT=FALSE;DB_CLOSE_DELAY=-1;AUTO_SERVER=TRUE" />
       <property name="javax.persistence.jdbc.user" value="sa" />
       <property name="javax.persistence.jdbc.password" value="" />
       
       <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
-      <property name="hibernate.hbm2ddl.auto" value="create-drop" />
+      <property name="hibernate.hbm2ddl.auto" value="update" />
       <property name="show_sql" value="true"/>
-      <property name="hibernate.temp.use_jdbc_metadata_defaults" value="false"/>
     </properties>
   </persistence-unit>
 </persistence>

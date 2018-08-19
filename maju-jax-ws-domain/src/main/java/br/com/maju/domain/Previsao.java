@@ -4,6 +4,7 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -12,6 +13,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Previsao {
 	
 	@Id
+	@GeneratedValue
 	private int id;
 	
 	@Column
